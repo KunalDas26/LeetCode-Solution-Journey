@@ -2,7 +2,7 @@ class Solution
 {
     public String reverseWords(String s) 
     {
-        int i = s.length() - 1;
+    /*    int i = s.length() - 1;
         String ans = "";
         
         while(i >= 0)
@@ -34,5 +34,19 @@ class Solution
         }
         
         return ans;
+    } */
+        
+    //Approach 2
+        
+    String words [] = s.split(" +");
+    StringBuilder sb = new StringBuilder();
+    
+    for(int i = words.length-1; i >=0; i--)
+    {
+        sb.append(words[i]);
+        sb.append(" ");
+    }
+    
+    return sb.toString().trim();
     }
 }
